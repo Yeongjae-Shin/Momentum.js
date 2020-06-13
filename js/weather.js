@@ -3,6 +3,7 @@ const API_KEY = "ea5fcba30bac525e8d03f1cc49aa0812";
 const weather = document.querySelector("#top");
 const temp = document.querySelector(".temp");
 const myLocation = document.querySelector("#location");
+const iconEl = document.querySelector("i");
 
 function getWeather(lat, lng) {
   fetch(
@@ -14,13 +15,10 @@ function getWeather(lat, lng) {
     .then(function (json) {
       const temperature = Math.round(json.main.temp);
       const place = json.name;
-      const icon = json.weather[0].icon;
-      const image = new Image();
-      image.src = `http://openweathermap.org/img/w/${icon}.png`;
+      const icon = json.weather[0].id;
       temp.innerText = `${temperature}℃`;
       myLocation.innerText = `${place}`;
-      image.classList.add("weatherIcon");
-      weather.prepend(image);
+      iconEl.classList.add(`wi-owm-${icon}`);
     });
 }
 
