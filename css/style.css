@@ -165,14 +165,24 @@ input::placeholder {
   opacity: 0.8;
 }
 
+.todoList {
+  text-align: center;
+  justify-content: center;
+}
+
 .pending-task {
   font-size: 3em;
   font-weight: 500;
+  display: inline-block;
+  margin-right: 20px;
+  position: fixed;
 }
 
 .finished-task {
   font-size: 3em;
   font-weight: 500;
+  display: inline-block;
+  margin-left: 10%;
 }
 
 button {
@@ -193,7 +203,7 @@ li {
 }
 
 .finished-task {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .footer {
