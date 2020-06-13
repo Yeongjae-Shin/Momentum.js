@@ -242,4 +242,5 @@ img {
   background-size: cover;
   z-index: -1;
   animation: fadeIn .5s ease-in-out;
+  opacity: 0.8;
 }
